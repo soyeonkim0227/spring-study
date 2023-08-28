@@ -25,8 +25,8 @@ public class Board {
 
     @Builder
     public Board(String title, String content, Category category) {
-        this.title = title,
-        this.content = content,
-        this.category = category
+        this.title = title;
+        this.content = content;
+        this.category = category;
     }
 }
