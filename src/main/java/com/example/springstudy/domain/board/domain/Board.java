@@ -29,4 +29,9 @@ public class Board {
         this.content = content;
         this.category = category;
     }
+
+    public void modifyBoard(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
