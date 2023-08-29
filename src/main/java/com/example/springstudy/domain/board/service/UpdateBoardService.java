@@ -3,7 +3,7 @@ package com.example.springstudy.domain.board.service;
 import com.example.springstudy.domain.board.domain.Board;
 import com.example.springstudy.domain.board.domain.repository.BoardRepository;
 import com.example.springstudy.domain.board.presentation.dto.request.UpdateBoardRequest;
-import com.example.springstudy.domain.board.presentation.dto.response.BoardResponse;
+import com.example.springstudy.domain.board.presentation.dto.response.BoardIdResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,12 +15,12 @@ public class UpdateBoardService {
     private final BoardRepository boardRepository;
 
     @Transactional
-    public BoardResponse modifyBoard(Long boardId, UpdateBoardRequest request) {
+    public BoardIdResponse modifyBoard(Long boardId, UpdateBoardRequest request) {
         Board board = boardRepository.findById(boardId)
                 .orElseThrow(RuntimeException::new);
-        
+
         board.modifyBoard(request.getTitle(), request.getContent());
 
-        return new BoardResponse(boardId);
+        return new BoardIdResponse(boardId);
     }
 }
