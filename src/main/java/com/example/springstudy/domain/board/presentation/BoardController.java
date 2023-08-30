@@ -4,14 +4,13 @@ import com.example.springstudy.domain.board.presentation.dto.request.CreateBoard
 import com.example.springstudy.domain.board.presentation.dto.request.UpdateBoardRequest;
 import com.example.springstudy.domain.board.presentation.dto.response.BoardIdResponse;
 import com.example.springstudy.domain.board.presentation.dto.response.BoardResponse;
-import com.example.springstudy.domain.board.service.CreateBoardService;
-import com.example.springstudy.domain.board.service.DeleteBoardService;
-import com.example.springstudy.domain.board.service.ReadOneBoardService;
-import com.example.springstudy.domain.board.service.UpdateBoardService;
+import com.example.springstudy.domain.board.service.*;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @RequestMapping("/board")
@@ -21,6 +20,7 @@ public class BoardController {
     private final UpdateBoardService updateBoardService;
     private final DeleteBoardService deleteBoardService;
     private final ReadOneBoardService readOneBoardService;
+    private final ReadAllBoardService readAllBoardService;
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
@@ -44,5 +44,11 @@ public class BoardController {
     @GetMapping("/{board-id}")
     public BoardResponse getOneBoard(@PathVariable("board-id") Long boardId) {
         return readOneBoardService.getOneBoard(boardId);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping("/all")
+    public List<BoardResponse> getAllBoards() {
+        return readAllBoardService.getAllBoards();
     }
 }
