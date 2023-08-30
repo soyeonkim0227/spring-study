@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class ReadOneBoardService {
     private final BoardRepository boardRepository;
 
-    @Transactional
+    @Transactional(readOnly = true)
     public BoardResponse getOneBoard(Long boardId) {
         Board board = boardRepository.findById(boardId)
                 .orElseThrow(() -> BoardNotFoundException.EXCEPTION);
