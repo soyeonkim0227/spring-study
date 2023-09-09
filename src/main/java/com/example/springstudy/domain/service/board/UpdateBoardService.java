@@ -1,10 +1,10 @@
-package com.example.springstudy.domain.board.service;
+package com.example.springstudy.domain.service.board;
 
-import com.example.springstudy.domain.board.domain.Board;
-import com.example.springstudy.domain.board.domain.repository.BoardRepository;
-import com.example.springstudy.domain.board.exception.BoardNotFoundException;
-import com.example.springstudy.domain.board.presentation.dto.request.UpdateBoardRequest;
-import com.example.springstudy.domain.board.presentation.dto.response.BoardIdResponse;
+import com.example.springstudy.domain.persistence.Board;
+import com.example.springstudy.domain.persistence.repository.BoardRepository;
+import com.example.springstudy.domain.exception.BoardNotFoundException;
+import com.example.springstudy.domain.presentation.dto.request.UpdateBoardRequest;
+import com.example.springstudy.domain.presentation.dto.response.BoardIdResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

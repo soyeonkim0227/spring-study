@@ -1,7 +1,7 @@
-package com.example.springstudy.domain.board.presentation.dto.response;
+package com.example.springstudy.domain.presentation.dto.response;
 
-import com.example.springstudy.domain.board.domain.Board;
-import com.example.springstudy.domain.board.domain.type.Category;
+import com.example.springstudy.domain.persistence.Board;
+import com.example.springstudy.domain.persistence.type.Category;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.example.springstudy.domain.board.presentation.dto.response;
+package com.example.springstudy.domain.presentation.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

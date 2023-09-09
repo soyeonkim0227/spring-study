@@ -1,10 +1,10 @@
-package com.example.springstudy.domain.board.presentation;
+package com.example.springstudy.domain.presentation;
 
-import com.example.springstudy.domain.board.presentation.dto.request.CreateBoardRequest;
-import com.example.springstudy.domain.board.presentation.dto.request.UpdateBoardRequest;
-import com.example.springstudy.domain.board.presentation.dto.response.BoardIdResponse;
-import com.example.springstudy.domain.board.presentation.dto.response.BoardResponse;
-import com.example.springstudy.domain.board.service.*;
+import com.example.springstudy.domain.presentation.dto.request.CreateBoardRequest;
+import com.example.springstudy.domain.presentation.dto.request.UpdateBoardRequest;
+import com.example.springstudy.domain.presentation.dto.response.BoardIdResponse;
+import com.example.springstudy.domain.presentation.dto.response.BoardResponse;
+import com.example.springstudy.domain.service.board.*;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.example.springstudy.domain.board.exception;
+package com.example.springstudy.domain.exception;
 
 import com.example.springstudy.global.error.CustomException;
 import com.example.springstudy.global.error.ErrorCode;

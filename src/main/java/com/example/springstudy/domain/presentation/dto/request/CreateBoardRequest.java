@@ -1,13 +1,14 @@
-package com.example.springstudy.domain.board.presentation.dto.request;
+package com.example.springstudy.domain.presentation.dto.request;
 
-import com.example.springstudy.domain.board.domain.type.Category;
+import com.example.springstudy.domain.persistence.type.Category;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class CreateBoardRequest {
 
     @NotNull(message = "title은 Null 불가")

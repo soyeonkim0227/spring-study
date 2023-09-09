@@ -1,4 +1,4 @@
-package com.example.springstudy.domain.board.domain.type;
+package com.example.springstudy.domain.persistence.type;
 
 public enum Category {
 

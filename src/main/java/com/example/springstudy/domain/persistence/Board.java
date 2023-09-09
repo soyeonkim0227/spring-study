@@ -1,6 +1,6 @@
-package com.example.springstudy.domain.board.domain;
+package com.example.springstudy.domain.persistence;
 
-import com.example.springstudy.domain.board.domain.type.Category;
+import com.example.springstudy.domain.persistence.type.Category;
 import jakarta.persistence.*;
 import lombok.*;
 
