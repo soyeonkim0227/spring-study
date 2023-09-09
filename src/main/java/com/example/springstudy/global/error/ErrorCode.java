@@ -7,6 +7,9 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ErrorCode {
 
+    // user
+    USER_ALREADY_EXISTS(409, "User already exists"),
+
     // board
     BOARD_NOT_FOUND(404, "Board not found"),
     BOARD_WRITER_MISMATCH(403, "Board writer misMatch"),
